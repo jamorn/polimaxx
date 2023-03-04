@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>A4 landscape</title>
+
+    <!-- Normalize or reset CSS with your favorite library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+
+    <!-- Load paper.css for happy printing -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css"
+    />
+
+    <!-- Set page size here: A5, A4 or A3 -->
+    <!-- Set also "landscape" if you need -->
+    <style>
+      @page {
+        size: A4 landscape;
+      }
+    </style>
+    <style>
+      .bno {
+        border: 2px solid black;
+        height: 40px;
+        width: 30px;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 40px;
+      }
+      .bno-middle {
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 40px;
+      }
+      .box-blank {
+        border: 2px solid black;
+        height: 60px;
+        width: 30px;
+      }
+      .lot-text {
+        text-align: center;
+        border: 2px solid black;
+        position: absolute;
+        top: 32%; /* 23*/
+        right: 15%;
+        display: inline-block;
+        /**/
+        transform: translate(-50%, -25%);
+        color: red;
+      }
+      .box-plant {
+        line-height: 0cm;
+        width: 400px;
+        height: 150px;
+        text-align: center;
+        /* border: 1px solid red;*/
+        font-weight: bold;
+      } /* */
+      .box-gradeonly {
+        width: 570px;
+        height: 100px;
+        text-align: center;
+        display: flex;
+        padding: 1px 0;
+        transform: translate(0, 50%);
+
+        /* border: 1px solid red;*/
+        /* box-sizing: border-box; */
+      }
+      .box-grade {
+        line-height: 0.5cm;
+        width: 300px;
+        height: 100px;
+        text-align: center;
+        /* border: 1px solid red;*/
+        box-sizing: border-box;
+      }
+      .box-logo-tis {
+        line-height: 0.1cm;
+        width: 200px;
+        height: 120px;
+        text-align: center;
+        /* border: 1px solid red;*/
+        box-sizing: border-box;
+        font-size: 12px;
+        font-weight: 900;
+        position: relative;
+      }
+      .border-dash {
+        line-height: 0.5cm;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .sirim-style {
+        /* border: 1px solid red;*/
+        width: 250px;
+        line-height: 0.2cm;
+        text-align: center;
+      }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      /* box div*/
+      .box-tis {
+        position: relative;
+        /* border: 1px solid red;*/
+        height: 120px;
+        width: calc(25% - 10px);
+        margin: 10px;
+      }
+      .vl1 {
+        border-left: 6px solid black;
+        height: 500px;
+        border-style: dotted;
+        position: absolute;
+      }
+      .vl {
+        border-left: 6px solid green;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        /* margin-left: -3px;*/
+        top: 0;
+      }
+      /* Dashed red border */
+      hr.new2 {
+        border-top: 3px dashed black;
+      }
+      hr.lotnumber {
+        border: 1px dashed black;
+      }
+      /* hr line vertical */
+      hr.ver {
+        width: 2px;
+        height: 750px;
+        background-color: #000000;
+        position: absolute;
+        top: 0px;
+        /* left: 50px*/
+        z-index: 10;
+      }
+
+      .lot-no {
+        font-size: 50px;
+      }
+      .box-blank {
+        border: 2px solid black;
+        height: 60px;
+        width: 30px;
+      }
+      .box-blank2 {
+        border: 2px solid black;
+        height: 40px;
+        width: 30px;
+      }
+      .linev1 {
+        border: 1px solid black;
+        height: 40px;
+        width: 3px;
+        position: absolute;
+      }
+    </style>
+  </head>
+
+  <!-- Set "A5", "A4" or "A3" for class name -->
+  <!-- Set also "landscape" if you need -->
+  <body class="A4 landscape">
+    <!-- Each sheet element should have the class "sheet" -->
+    <!-- "padding-**mm" is optional: you can set 10, 15, 20 or 25 -->
+
+    <section
+      class="sheet padding-10mm"
+      style="
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/jumbo-d52c0.appspot.com/o/image%2Fpolimaxx.jpg?alt=media&token=da909d73-d634-4a68-9331-3b8ddd9d4721);
+        background-size: cover;
+      "
+    >
+      <div
+        style="
+          border: 1px black dashed;
+          line-height: 1px;
+          text-align: center;
+          padding-left: 520px;
+        "
+      >
+        Grade
+        <div style="width: 550px; border: 1px solid black">
+          <p style="font-size: 60px">BM3245PC SUB/750</p>
+        </div>
+      </div>
+
+      <!--       <div
+      style="border: 1px solid black; line-height: 0.5px; padding-top: 1px"
+    >
+      <p style="font-size: 70px">HDPE</p>
+      <p style="font-size: 40px">HIGHT DENSITY POLYYETHYLENE</p>
+    </div> -->
+
+      <!-- box bog no -->
+      <div class="bno" style="top: 440px; left: 795px">0</div>
+      <div class="bno" style="top: 440px; left: 830px">0</div>
+      <div class="bno" style="top: 440px; left: 866px">7</div>
+      <div class="bno-middle" style="top: 440px; left: 901px">-</div>
+      <div class="bno" style="top: 440px; left: 915px">0</div>
+      <div class="bno" style="top: 440px; left: 950px">1</div>
+      <div class="bno-middle" style="top: 440px; left: 987px">-</div>
+      <div class="bno" style="top: 440px; left: 1002px">E</div>
+
+      <div
+        class="box-grade"
+        style="position: absolute; top: 195px; left: 765px"
+      >
+        <p style="font-size: 45px">8221106026</p>
+      </div>
+      <div class="lot-text">
+        <p style="font-size: 30px">8221106026</p>
+      </div>
+
+      <div
+        class="box-grade"
+        style="position: absolute; top: 315px; left: 780px"
+      >
+        <p style="font-size: 40px">750</p>
+      </div>
+      <!--       <div class="box-grade" style="position: absolute;top: 435px; left: 770px">
+        <p style="font-size: 40px">0 0 9 - 1 6 - N</p>
+      </div> -->
+    </section>
+
+    <section
+      class="sheet padding-10mm"
+      style="
+        background-image: url(https://firebasestorage.googleapis.com/v0/b/jumbo-d52c0.appspot.com/o/image%2Fpolimaxx.jpg?alt=media&token=da909d73-d634-4a68-9331-3b8ddd9d4721);
+        background-size: cover;
+      "
+    >
+      <!-- Write HTML just like a web page -->
+      <article>
+        (F/T)&nbsp;<input type="checkbox" onclick="ShowHideDiv(this)" />
+      </article>
+
+      <!-- <hr class="new2" style="position: abolute;" /> -->
+      <!-- <hr class="lotnumber" style="position: abolute;padding-top: 250px;" /> -->
+      <!-- <hr class="lotnumber" style="position: abolute;padding-top: 220px;" />  -->
+      <!-- ขีดเส้นกะระยะ h lot-->
+      <!-- <div class="vl"></div> -->
+      <!-- เส้นแนวตั้งกะระยะ 2 เส้น -->
+      <!-- <div style="padding-left: 250px;">
+        <hr class="ver" style="padding-left: 1px;" />         
+      </div> -->
+
+      <!-- <div style="padding-left: 500px;">
+        <hr class="ver" style="padding-left: 1px; " /> 
+      </div> -->
+
+      <!-- logo -->
+      <!--       <div
+        class="container"
+        style="position: relative; top: 350px; left: 80px; outline-style: dotted;"
+      >
+        <div class="box-tis" >   <img src="image/TIS2559-2544.png"
+            style="width: 50%;opacity: 0.7; z-index: 3;"           
+          />
+        </div>
+        <div class="box-tis"><img src="image/sirim_logo-removebg-preview.svg"
+            style="width: 50%; z-index: 3;"           
+          /></div>
+      </div> -->
+      <hr />
+      <!-- grade -->
+      <div
+        class="box-gradeonly"
+        style="
+          position: absolute;
+          top: 100px;
+          left: 520px;
+          border: 1px solid black;
+        "
+      >
+        <p style="font-size: 60px">BM3245PC SUB/750</p>
+      </div>
+
+      <div
+        class="box-grade"
+        style="position: absolute; top: 210px; left: 730px"
+      >
+        <p style="font-size: 40px">8221106026</p>
+      </div>
+      <div
+        class="box-grade"
+        style="position: absolute; top: 325px; left: 780px"
+      >
+        <p style="font-size: 40px">750</p>
+      </div>
+      <!-- box bog no -->
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 795px"
+      ></div>
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 830px"
+      ></div>
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 865px"
+      ></div>
+
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 915px"
+      ></div>
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 950px"
+      ></div>
+
+      <div
+        class="box-blank2"
+        style="position: absolute; top: 460px; left: 1002px"
+      ></div>
+
+      <div
+        class="box-grade"
+        style="position: absolute; top: 435px; left: 770px"
+      >
+        <p style="font-size: 40px">0 0 9 - 1 6 - N</p>
+      </div>
+
+      <!-- -->
+
+      <!-- -->
+      <div
+        style="
+          position: absolute;
+          top: 200px;
+          left: 25px;
+          text-align: center;
+          line-height: 0.1cm;
+          padding-top: 1px;
+        "
+      >
+        <p style="font-size: 70px">HDPE</p>
+        <p style="font-size: 30px">HIGHT DENSITY POLYYETHYLENE</p>
+      </div>
+      <!--
+<div class="box-plant" style="position: absolute;top: 220px; left: 150px">
+   
+     <p style="font-size: 18px">HIGHT DENSITY POLYYETHYLENE</p> 
+  </div>-->
+
+      <!-- กลุ่ม logo-->
+      <!-- เครื่องหมาย มอก -->
+      <div
+        class="box-logo-tis"
+        style="position: absolute; top: 370px; left: 80px"
+      >
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/jumbo-d52c0.appspot.com/o/image%2FTIS2559-2544.png?alt=media&token=aa804f3c-1602-470d-a829-c9dfb266c93e"
+          style="width: 60%; z-index: 3"
+        />
+      </div>
+
+      <div
+        class="box-logo-tis"
+        style="position: absolute; top: 500px; left: 180px"
+        id="ft"
+        style="display: none"
+      >
+        <p style="font-size: 80px">(F/T)</p>
+      </div>
+      <!-- เครื่องหมาย sirim -->
+      <div
+        class="box-logo-tis"
+        style="position: absolute; top: 370px; left: 320px"
+      >
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/jumbo-d52c0.appspot.com/o/image%2Fsirim_logo.png?alt=media&token=89d3890f-73e1-415e-b40e-3f523c907f43"
+          style="width: 70%; z-index: 3"
+        />
+        <p>Certified to MS1058 : PART 1 : 2005</p>
+        <p>Certification No. : PC004152</p>
+        <p>Designation : PE100</p>
+      </div>
+
+      <!-- ตัวหนังสือ 3 แถว ใต้ sirim
+      <div class="sirim-style" style="position: fixed; top: 550px; left: 720px">
+        <p>Certified to MS1058 : PART 1 : 2005</p>
+        <p>Certification No. : PC004152</p>
+        <p style="font-size: 17px">Designation : PE100</p>
+      </div>
+      -->
+    </section>
+  </body>
+</html>
+<script>
+  function firstton() {
+    var chboxs = document.getElementsByName("ft");
+  }
+  function ShowHideDiv(chk) {
+    var dvFt = document.getElementById("ft");
+    dvFt.style.display = chk.checked ? "block" : "none";
+  }
+</script>
